@@ -121,15 +121,16 @@
     <!-- Khung phát âm thanh bài nghe -->
     <div class="audio-box">
         <p style="font-weight: bold; color: var(--primary-color); margin-bottom: 5px;">🎧 Lắng nghe đoạn hội thoại và trả lời câu hỏi:</p>
-        <!-- controlsList="nodownload" giúp hạn chế học sinh tải file trực tiếp -->
+        
+        <!-- Sử dụng định dạng .mp3 chuẩn -->
         <audio controls controlsList="nodownload">
-            <!-- Thay "audio_test.mp4" bằng tên file mp4 của bạn đặt cùng thư mục trên GitHub -->
-            <source src="audio_test.mp4" type="audio/mp4">
+            <!-- QUAN TRỌNG: Đảm bảo tên file này khớp 100% (cả chữ hoa/thường) với file bạn đẩy lên GitHub -->
+            <source src="Track 07.mp3" type="audio/mpeg">
             Trình duyệt của bạn không hỗ trợ phát âm thanh.
         </audio>
     </div>
 
-    <!-- Danh sách câu hỏi dựa trên nội dung bạn đưa -->
+    <!-- Danh sách câu hỏi -->
     <div class="question-card">
         <div class="question-title">1. Is that Mai?</div>
         <div class="options-list">

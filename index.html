@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Listening</title>
+    <style>
+        :root {
+            --primary-color: #2A4D69;
+            --secondary-color: #4B86B4;
+            --light-bg: #F5F9FC;
+            --border-color: #ADCBE3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(42, 77, 105, 0.15);
+            padding: 30px;
+            border: 2px solid var(--border-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+
+        .audio-box {
+            background: #f0f7fc;
+            border: 2px dashed var(--secondary-color);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .question-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .question-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: var(--light-bg);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option-item:hover {
+            background: var(--border-color);
+        }
+
+        .option-item input {
+            margin-right: 12px;
+            transform: scale(1.2);
+        }
+
+        .btn-submit {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Listening Test</h1>
+
+    <!-- Khung phát âm thanh bài nghe -->
+    <div class="audio-box">
+        <p style="font-weight: bold; color: var(--primary-color); margin-bottom: 5px;">🎧 Lắng nghe đoạn hội thoại và trả lời câu hỏi:</p>
+        <!-- controlsList="nodownload" giúp hạn chế học sinh tải file trực tiếp -->
+        <audio controls controlsList="nodownload">
+            <!-- Thay "audio_test.mp4" bằng tên file mp4 của bạn đặt cùng thư mục trên GitHub -->
+            <source src="audio_test.mp4" type="audio/mp4">
+            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+        </audio>
+    </div>
+
+    <!-- Danh sách câu hỏi dựa trên nội dung bạn đưa -->
+    <div class="question-card">
+        <div class="question-title">1. Is that Mai?</div>
+        <div class="options-list">
+            <label class="option-item"><input type="radio" name="q1" value="A"> A. Yes, it is.</label>
+            <label class="option-item"><input type="radio" name="q1" value="B"> B. No, it isn't.</label>
+        </div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-title">2. What is the speaker's hobby?</div>
+        <div class="options-list">
+            <label class="option-item"><input type="radio" name="q2" value="A"> A. Reading</label>
+            <label class="option-item"><input type="radio" name="q2" value="B"> B. Cooking</label>
+            <label class="option-item"><input type="radio" name="q2" value="C"> C. Drawing</label>
+        </div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-title">3. What's your name?</div>
+        <div class="options-list">
+            <label class="option-item"><input type="radio" name="q3" value="A"> A. My name is Phong.</label>
+            <label class="option-item"><input type="radio" name="q3" value="B"> B. My name is Ben.</label>
+        </div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-title">4. Is that Ben?</div>
+        <div class="options-list">
+            <label class="option-item"><input type="radio" name="q4" value="A"> A. Yes, it is.</label>
+            <label class="option-item"><input type="radio" name="q4" value="B"> B. No, it isn't.</label>
+        </div>
+    </div>
+
+    <button class="btn-submit" onclick="alert('Đã nộp bài thành công!')">NỘP BÀI</button>
+</div>
+
+</body>
+</html>
